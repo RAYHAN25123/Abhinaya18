@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+    font-size: 56px;
+    letter-spacing: 5px;
+    color: #38bdf8;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+/* Section */
+.section {
+    padding: 90px 50px;
+    text-align: center;
+}
+
+.gray {
+    background: #020617;
+}
+
+/* Vision */
+.vision-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+/* Classes */
+.classes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.photo {
+    background: #1e293b;
+    padding: 50px 0;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #020617;
+    text-align: center;
+}
+
+/* Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Class Click Interaction */
+.class-card {
+    cursor: pointer;
+}
+
+.student-list {
+    list-style: none;
+    margin-top: 15px;
+    padding-left: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.student-list li {
+    background: rgba(255, 255, 255, 0.08);
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Active state */
+.student-list.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* ===== PERBAIKAN POSISI GALERI SLIDER ===== */
+#gallery {
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    /* INI KUNCI AGAR TENGAH */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.slider img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slider:hover img {
+    transform: scale(1.05);
+}
